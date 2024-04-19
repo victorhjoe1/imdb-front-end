@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand text-warning" routerLink="">IMDB</a>
+      <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link text-light" routerLink="">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link text-light" routerLink="/filmes">
+                    Filmes
+                </a>
+            </li>
+        </ul>
+        <div class="row">
+            <div class="col">
+                <input [(ngModel)]="search" (keydown)="pequisar()" class="form-control mr-sm-2" style="width: 400px;" type="search" placeholder="Buscar filmes" aria-label="busca">
+            </div>
+            @if (logged) {
+                <div class="col">
+                    <button (click)="efetuarLogout()" class="btn btn-outline-warning my-2 my-sm-0" type="button" routerLink="">Logout</button>
+                </div>
+            } @else {
+                <div class="col">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="button" routerLink="/login">Login</button>
+                </div>
+            }
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  
+  
+  

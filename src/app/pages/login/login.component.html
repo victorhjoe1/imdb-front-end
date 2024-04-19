@@ -1,0 +1,25 @@
+<div class="login-container">
+    <div class="login-form" style="width: 400px;">
+      <h2>Login</h2>
+      <form>
+        <div class="mb-3">
+          <label for="username" class="form-label">Usuário</label>
+          <input name="username" [(ngModel)]="loginObject.login" type="text" class="form-control" id="username" placeholder="Digite o usuário">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Senha</label>
+          <input  name="password" [(ngModel)]="loginObject.senha" type="password" class="form-control" id="password" placeholder="Digite sua senha">
+        </div>
+        <button (click)="efetuarLogin()" type="submit" class="btn btn-primary">Logar</button>
+      </form>
+    </div>
+    @if(showMessage) {
+        <div class="message">
+            <ngb-alert #selfClosingAlert  [dismissible]="false" type="danger">
+                Ocorreu um erro durante o login. Por favor, tente novamente.
+            </ngb-alert>
+        </div>
+      }
+</div>
+
+  

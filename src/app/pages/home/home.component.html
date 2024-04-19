@@ -1,0 +1,17 @@
+<div class="container-fluid text-light">
+    <div class="row">
+      @for (item of filmesList(); track item.id) {
+            <div class="col">
+                <div class="card" style="width: 18rem; margin: 10px;">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0d7nqDjUPyuv61U28yI1SbE2W9ddPRF2xig&s" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ item.nome }}</h5>
+                      <p class="card-text">Diretor: {{ item.diretor }}</p>
+                      <p class="card-text">Gênero: {{ item.genero }}</p>
+                      <a [routerLink]="['detalhes', item.id]" class="btn btn-primary">Ver mais Detalhes do filme</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

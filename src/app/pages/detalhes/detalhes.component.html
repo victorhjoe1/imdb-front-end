@@ -1,0 +1,43 @@
+@if(filme) {
+<div class="text-justify p-4 movie">
+    <div class="row mb-4">
+        <div class="col">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0d7nqDjUPyuv61U28yI1SbE2W9ddPRF2xig&s" class="img-fluid" alt="Responsive image">
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col">
+            <h2>{{ filme.nome }}</h2>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col">            
+            <h3>Diretor: {{ filme.diretor }}</h3>
+            <h3>Gênero: {{filme.genero}} </h3>
+            <h3>Atores: {{ filme.atores }} </h3>
+            <h3>Nota: {{ filme.mediaVotos }}</h3>
+        </div>
+    </div>
+    @if(logged){
+        <div class="row mb-2">
+            <div class="col-3">            
+                <h3>Deixe sua avaliação:</h3>
+            </div>
+            <div class="col">
+                <ngb-rating [(rate)]="nota" />
+            </div>
+        </div>
+    }
+
+    <div  class="row mb-4">
+        <div class="col-3">
+            <h3>Descrição completa:</h3>
+            <br>
+            <p>{{ filme.descricao }}</p>
+        </div>
+    </div>
+
+</div>
+}

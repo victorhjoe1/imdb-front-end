@@ -1,0 +1,17 @@
+.filme-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filme-form {
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filme-form h2 {
+    text-align: center;
+  }
